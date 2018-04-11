@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             }
       }
     
-    func updateTime() {
+    @objc func updateTime() {
         let date =  Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss a"
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
 
    @IBAction func timerStrat(_ sender: Any) {
-        if timerSwitch.isOn == true {
+        if mySwitch.isOn == true {
             myTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
             
             // closure 사용
