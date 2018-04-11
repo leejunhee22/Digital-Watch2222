@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     func updateTime() {
-        let date = Date()
+        let date =  Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss a"
         timeLabel.text = formatter.string(from: date)
